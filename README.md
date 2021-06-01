@@ -1,2 +1,2 @@
-# CubeSQL.Python2x
-Python2 port of the JSON client driver for the CubeSQL database server
+# CubeSQL.Python2
+Simple Python 2.x JSON client for the CubeSQL database server
