@@ -7,16 +7,16 @@
 #                                                          
 #  Product:     CubeSQL.Python2 - Demo App for the Python2 JSON driver
 #  Version:     Revision: 1.0.0, Build: 1
-#  Date: 		    2021/06/03 21:58:48
-#  Author: 		  Andreas Pfeil <patreon@familie-pfeil.com>
+#  Date:        2021/06/03 21:58:48
+#  Author:      Andreas Pfeil <patreon@familie-pfeil.com>
 #
 #  Description: Opens a CubeSQL database connection with the JSON protocoll
 #               Creates a table and inserts some rows, then selects the
 #               values and prints it on the screen
 #
-#  Usage:				python2 simple.py
+#  Usage:       python2 simple.py
 #
-#  License:			BEER license / MIT license
+#  License:     BEER license / MIT license
 #
 #  Copyright (C) 2021 by Andreas Pfeil
 #
@@ -42,12 +42,14 @@ print( "Selecting database..." )
 cube.use( "test" )
 
 print( "Creation table..." )
+cube.execute( "CREATE TABLE IF NOT EXISTS Users (FirstName TEXT, LastName TEXT, Address TEXT);" )
 
 print( "Inserting data..." )
-cube.execute( "INSERT INTO Log VALUES ( DATETIME( 'now', 'localtime' ), '127.0.0.1' , 'request...' );" );
+cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firstreet 2, 69000 Bettertown' );" )
+cube.execute( "INSERT INTO Users VALUES ( 'Other', 'Guy', 'Onlystreet 1, 69001 Besttown' );" )
 
 print( "Selecting data..." )
-d = cube.select( "SELECT * FROM Log;" );
+d = cube.select( "SELECT * FROM Users;" );
 
 print( "Printing data..." )
 print( d )

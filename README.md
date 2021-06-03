@@ -1,4 +1,4 @@
-# cubeSQL Python2 Cleint
+# cubeSQL Python 2.x client
 
 Simple Python 2.x JSON client for the [cubeSQL](http://www.sqlabs.com/cubesql.php) database server.
 
@@ -12,11 +12,16 @@ import cubesql
 cube = cubesql.CubeSQL( 'localhost', "loginname", "password" )
 cube.use( "test" )
 
-cube.execute( "INSERT INTO Log VALUES ( DATETIME( 'now', 'localtime' ), '127.0.0.1' , 'request...' );" );
+cube.execute( "CREATE TABLE IF NOT EXISTS Users (FirstName TEXT, LastName TEXT, Address TEXT);" )
 
-d = cube.select( "SELECT * FROM Log;" );
+cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firstreet 2, 69000 Bettertown' );" )
+cube.execute( "INSERT INTO Users VALUES ( 'Other', 'Guy', 'Onlystreet 1, 69001 Besttown' );" )
+
+d = cube.select( "SELECT * FROM Users;" );
 print( d )
 ```
+
+## Installation
 
 ## Donate
 
@@ -40,4 +45,7 @@ print( d )
 
 ## License
 
-BEER license / MIT license
+[BEER license](https://github.com/andreaspfeil/CubeSQL.Python2/blob/main/LICENSE) / MIT license
+
+The BEER license is basically the same as the MIT license (see link), except 
+that you should buy the author a beer (see Donate) if you use this software.
