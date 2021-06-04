@@ -14,7 +14,7 @@ cube.use( "test" )
 
 cube.execute( "CREATE TABLE IF NOT EXISTS Users (FirstName TEXT, LastName TEXT, Address TEXT);" )
 
-cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firstreet 2, 69000 Bettertown' );" )
+cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firststreet 2, 69000 Bettertown' );" )
 cube.execute( "INSERT INTO Users VALUES ( 'Other', 'Guy', 'Onlystreet 1, 69001 Besttown' );" )
 
 d = cube.select( "SELECT * FROM Users;" );
@@ -22,6 +22,14 @@ print( d )
 ```
 
 ## Installation
+
+## Documentation
+
+- [Wiki](https://github.com/andreaspfeil/CubeSQL.Python2/wiki)
+
+## Video Tutorials
+
+- [YouTube](https://www.youtube.com/channel/UCQF_wTmbR5aJZUcb7U1_0Fw)
 
 ## Donate
 
@@ -31,18 +39,17 @@ print( d )
 
 ## Contributors
 
-- [Andreas Pfeil](https://github.com/andreaspfeil)
+- [Marco Bambini](https://github.com/marcobambini) (Author of cubeSQL and the original PHP client)
 
 ## Acknowledgments
 
-- [sqlabs](https://sqlabs.com)
 - [cubeSQL](https://sqlabs.com/cubesql)
-- [Marco Bambini](https://github.com/marcobambini)
 
 ## See also
 
-- [cubeSQL for Python3](https://github.com/andreaspfeil/CubeSQL.Python3)
-- [cubeSQL für .NET](https://github.com/andreaspfeil/CubeSQL.NET)
+- [cubeSQL.Python3](https://github.com/andreaspfeil/CubeSQL.Python3)
+- [cubeSQL.NET](https://github.com/andreaspfeil/CubeSQL.NET)
+- [cubeSQL.go](https://github.com/andreaspfeil/CubeSQL.go)
 
 ## License
 
@@ -53,4 +60,4 @@ that you should buy the author a beer [(see Donate)](https://github.com/andreasp
 
 ## Sponsors
 
-(none yet)
+none yet - YOU can still be number one in this list!!!

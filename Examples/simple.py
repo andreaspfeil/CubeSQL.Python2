@@ -10,7 +10,7 @@
 #  Date:        2021/06/03 21:58:48
 #  Author:      Andreas Pfeil <patreon@familie-pfeil.com>
 #
-#  Description: Opens a CubeSQL database connection with the JSON protocoll
+#  Description: Opens a cubeSQL database connection with the JSON protocoll
 #               Creates a table and inserts some rows, then selects the
 #               values and prints it on the screen
 #
@@ -45,7 +45,7 @@ print( "Creation table..." )
 cube.execute( "CREATE TABLE IF NOT EXISTS Users (FirstName TEXT, LastName TEXT, Address TEXT);" )
 
 print( "Inserting data..." )
-cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firstreet 2, 69000 Bettertown' );" )
+cube.execute( "INSERT INTO Users VALUES ( 'Some', 'One', 'Firststreet 2, 69000 Bettertown' );" )
 cube.execute( "INSERT INTO Users VALUES ( 'Other', 'Guy', 'Onlystreet 1, 69001 Besttown' );" )
 
 print( "Selecting data..." )

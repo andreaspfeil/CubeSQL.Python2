@@ -10,9 +10,11 @@
 #  Date:        2021/06/03 21:58:48
 #  Author:      Andreas Pfeil <patreon@familie-pfeil.com>
 #
-#  Description: Simple Python 2.x JSON client class for the cubeSQL database 
+#  Description: Simple Python2 JSON client class for the cubeSQL database 
 #               server ported from sqlabs.com PHP client example, originally
 #               written by Marco Bambini.
+#
+#  Usage:       import cubesql
 #
 #  License:     BEER license / MIT license
 #
