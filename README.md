@@ -1,6 +1,6 @@
-# cubeSQL Python 2.x client
+# cubeSQL Python2 client
 
-Simple Python 2.x JSON client for the [cubeSQL](http://www.sqlabs.com/cubesql.php) database server.
+Simple Python2 JSON client for the [cubeSQL](http://www.sqlabs.com/cubesql.php) database server.
 
 ## Usage example
 
@@ -25,6 +25,7 @@ print( d )
 
 ## Donate
 
+- [github](https://github.com/sponsors/andreaspfeil)
 - [Patreon](https://www.patreon.com/andreas_pfeil)
 - [PayPal](https://www.paypal.com/paypalme/PfeilAndreas/10.00EUR)
 
@@ -45,7 +46,11 @@ print( d )
 
 ## License
 
-[BEER license](https://github.com/andreaspfeil/CubeSQL.Python2/blob/main/LICENSE) / MIT license
+[BEER license / MIT license](https://github.com/andreaspfeil/CubeSQL.Python2/blob/main/LICENSE) 
 
-The BEER license is basically the same as the MIT license (see link), except 
-that you should buy the author a beer (see Donate) if you use this software.
+The BEER license is basically the same as the MIT license [(see link)](https://github.com/andreaspfeil/CubeSQL.Python2/blob/main/LICENSE), except 
+that you should buy the author a beer [(see Donate)](https://github.com/andreaspfeil/CubeSQL.Python2#donate) if you use this software.
+
+## Sponsors
+
+(none yet)
