@@ -30,22 +30,20 @@ import socket
 import binascii
 
 def sha1( data, binary = False ):
-  s = hashlib.sha1()
-  s.update( data )
   if binary:
-    return s.digest()
+    return hashlib.sha1( data ).digest()
   else:
-    return binascii.hexlify( s.digest() )
+    return hashlib.sha1( data ).hexdigest()
 
 class CubeSQL:
   def __init__(self, host, name, password ):
-    self.socket = None
+    self.socket        = None
     self.socketTimeout = 12
     if self.open( host, name, password ) == False:
       raise "Connection error" 
   
   def resetError( self ):
-    self.errorCode = 0
+    self.errorCode    = 0
     self.errorMessage = ""
     
   def isError( self ):
@@ -55,9 +53,14 @@ class CubeSQL:
     if self.socket != None:
       try:
         self.resetError()
-        data = self.socket.sendall( json_request )
-        data = self.socket.recv( 1024 )
-        
+        self.socket.sendall( json_request.encode( 'utf-8' ) )
+        data = ""
+        while( True ):
+          buf  = self.socket.recv( 4096 ).decode( 'utf-8' )
+          data = data + buf
+          if( len( buf ) != 4096 ):
+            break
+                    
         try:
           data = json.loads( data )
           if "errorCode" in data:
